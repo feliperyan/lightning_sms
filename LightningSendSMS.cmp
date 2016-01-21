@@ -1,0 +1,22 @@
+<aura:component controller="FelipeSendSMS" 
+                implements="flexipage:availableForAllPageTypes">
+    
+	<ltng:require styles="/resource/SLDS0120/assets/styles/salesforce-lightning-design-system-vf.css"/>
+	<div class="slds">		
+		<ui:inputTextArea aura:id="txt1" label="Message Body" class="slds-textarea" />
+        <br/>
+    	        
+       	<button class="slds-button slds-button--neutral" onclick="{!c.aloha}">
+            <c:svg class="slds-button__icon slds-button__icon--left" xlinkHref="/resource/SLDS0120/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait" />
+			Send SMS
+        </button>
+        
+		<span id="smsstatus" style="margin-left: 2em; visibility:hidden">        	
+            <c:svg class="slds-icon slds-icon--small slds-icon-text-default" xlinkHref="/resource/SLDS0120/assets/icons/utility-sprite/svg/symbols.svg#success" />
+		    SMS Sent!
+			<span class="slds-assistive-text">SMS Sent</span>
+		</span>
+	</div>    
+    
+    
+</aura:component>
